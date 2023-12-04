@@ -13,12 +13,17 @@ const typeDefs = `
   }
 
   input BookInput {
-	
+	authors: [String]
+	description: String
+	bookId: String
+	image: String
+	link: String
+	title: String
   }
 
   type Query {
 	getSingleUser(userId: ID!): User
-	me: Profile
+	me: User
   }
 
   type Mutation {
